@@ -15,3 +15,5 @@ If you are developing a production application, we recommend using TypeScript an
 npm install tailwindcss @tailwindcss/vite
 
 VS code extension: Tailwind CSS IntelliSense
+
+React Router Dom: npm i react-router-dom

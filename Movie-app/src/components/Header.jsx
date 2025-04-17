@@ -16,7 +16,7 @@ export const navigation = [
   },
   {
     label: "Movies",
-    href: "movies",
+    href: "movie",
     icon: <SiThemoviedatabase />,
   },
 ];
@@ -50,7 +50,7 @@ const Header = () => {
   };
 
   return (
-    <header className=" top-0 w-full h-25 bg-gray-800 text-white p-4">
+    <header className="fixed top-0 w-full bg-black/70 h-25 z-40 text-white p-4">
       <div className="container mx-auto px-3 flex items-center h-full ">
         <Link to="/">
           <img src={logo} alt="logo" width={120}></img>

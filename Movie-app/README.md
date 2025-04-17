@@ -24,3 +24,7 @@ Movie DB - TMDB
 ![alt text](image-3.png)
 
 npm i axios
+
+redux toolkit - npm install @reduxjs/toolkit react-redux
+
+npm i moment (packages for Date/time)

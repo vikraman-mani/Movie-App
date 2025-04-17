@@ -17,3 +17,10 @@ npm install tailwindcss @tailwindcss/vite
 VS code extension: Tailwind CSS IntelliSense
 
 React Router Dom: npm i react-router-dom
+
+Movie DB - TMDB
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+
+npm i axios

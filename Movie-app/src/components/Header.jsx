@@ -40,11 +40,13 @@ const Header = () => {
   const [search, setSearch] = React.useState("");
 
   useEffect(() => {
-    naviagate(`/search?q=${search}`);
-  }, []);
+    if (search) {
+      naviagate(`/search?q=${search}`);
+    }
+  }, [search]);
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
   };
 
   return (

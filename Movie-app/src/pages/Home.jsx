@@ -43,11 +43,7 @@ const Home = () => {
         </div>
       </div>
 
-      <HorizontalCar
-        data={nowPlayData}
-        heading={"Now Playing"}
-        trending={true}
-      />
+      <HorizontalCar data={nowPlayData} heading={"Now Playing"} />
     </div>
   );
 };

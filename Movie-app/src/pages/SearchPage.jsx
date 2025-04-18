@@ -11,9 +11,11 @@ const SearchPage = () => {
   const [pageNo, setPageNo] = useState([1]);
   const navigate = useNavigate();
 
+  const query = location?.search?.slice(3);
+
   const fetchData = async () => {
     try {
-      const res = await axios.get("/search/collection", {
+      const res = await axios.get("/search/multi", {
         params: {
           query: location?.search?.slice(3),
           page: pageNo,
@@ -35,13 +37,17 @@ const SearchPage = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    if (query) {
+      fetchData();
+    }
   }, [pageNo]);
 
   useEffect(() => {
-    setPageNo(1);
-    setData([]);
-    fetchData();
+    if (query) {
+      setPageNo(1);
+      setData([]);
+      fetchData();
+    }
   }, [location?.search]);
 
   useEffect(() => {

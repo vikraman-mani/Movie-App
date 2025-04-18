@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import user from "../assets/user.png";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { TbPhotoSearch } from "react-icons/tb";
 import { useEffect } from "react";
 import { IoIosHome } from "react-icons/io";
@@ -36,8 +36,11 @@ export const mobileNavigation = [
 ];
 
 const Header = () => {
+  const location = useLocation();
+  const removeSpace = location?.search?.slice(3)?.split("%20").join(" ");
+
+  const [search, setSearch] = React.useState(removeSpace);
   const naviagate = useNavigate();
-  const [search, setSearch] = React.useState("");
 
   useEffect(() => {
     if (search) {
